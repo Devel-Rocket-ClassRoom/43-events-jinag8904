@@ -9,7 +9,8 @@
 
 ## 1. 대리자 복습
 
-반환값과 매개변수가 없는 대리자 `Notify`를 선언하고, `SayHello`와 `SayGoodbye` 두 메서드를 등록한 후 호출하세요.
+반환값과 매개변수가 없는 대리자 `Notify`를 선언하고, 
+`SayHello`와 `SayGoodbye` 두 메서드를 등록한 후 호출하세요.
 
 - `SayHello()`: "안녕하세요!" 출력
 - `SayGoodbye()`: "안녕히 가세요!" 출력
@@ -43,7 +44,8 @@
 
 ## 3. 이벤트 구독
 
-`Player` 클래스에 `Action<int>` 타입의 `DamageTaken` 이벤트를 선언하고, `HealthBar`와 `SoundManager`가 구독하도록 구현하세요.
+`Player` 클래스에 `Action<int>` 타입의 `DamageTaken` 이벤트를 선언하고, 
+`HealthBar`와 `SoundManager`가 구독하도록 구현하세요.
 
 - `Player`: 체력 100, `TakeDamage(int damage)` 메서드에서 이벤트 발생
 - `HealthBar`: 체력바 업데이트 메시지 출력
@@ -62,7 +64,8 @@
 
 ## 4. 이벤트 해제
 
-`Timer` 클래스에 `Action` 타입의 `Tick` 이벤트를 선언하고, `Logger`가 구독/해제하는 것을 구현하세요.
+`Timer` 클래스에 `Action` 타입의 `Tick` 이벤트를 선언하고, 
+`Logger`가 구독/해제하는 것을 구현하세요.
 
 - `Timer`: `Start()` 메서드에서 3회 반복하며 `Tick` 이벤트 발생
 - `Logger`: 틱 기록 메시지 출력
@@ -89,7 +92,8 @@
 
 ## 5. 람다식 이벤트 핸들러
 
-`Sensor` 클래스에 `Action<string>` 타입의 `Alert` 이벤트를 선언하고, 람다식으로 이벤트를 구독하세요.
+`Sensor` 클래스에 `Action<string>` 타입의 `Alert` 이벤트를 선언하고, 
+람다식으로 이벤트를 구독하세요.
 
 - `Sensor`: `Detect(string message)` 메서드에서 감지 메시지 출력 후 이벤트 발생
 - 람다식으로 경보 메시지와 로그 메시지를 출력하는 두 핸들러 등록
@@ -110,7 +114,8 @@
 
 ## 6. Action 대리자 활용
 
-`GameCharacter` 클래스에 `Action`, `Action<int>`, `Action<int, string>` 타입의 이벤트를 선언하고 활용하세요.
+`GameCharacter` 클래스에 `Action`, `Action<int>`, `Action<int, string>` 타입의 
+이벤트를 선언하고 활용하세요.
 
 - `OnDeath`: 매개변수 없는 사망 이벤트
 - `OnDamaged`: 남은 체력을 전달하는 이벤트
@@ -130,7 +135,8 @@
 
 ## 7. 표준 이벤트 패턴 (EventArgs)
 
-`EventArgs`를 상속한 `PriceChangedEventArgs` 클래스와 `Stock` 클래스를 구현하여 표준 이벤트 패턴을 연습하세요.
+`EventArgs`를 상속한 `PriceChangedEventArgs` 클래스와 `Stock` 클래스를 구현하여 
+표준 이벤트 패턴을 연습하세요.
 
 - `PriceChangedEventArgs`: `OldPrice`, `NewPrice`, `ChangePercent` 속성
 - `Stock`: `EventHandler<PriceChangedEventArgs>` 타입의 `PriceChanged` 이벤트
@@ -160,10 +166,14 @@
 
 ## 8. 실전 예제 - 연료 경고 시스템
 
-`Car` 클래스에 연료 관련 이벤트를 선언하고, `Dashboard`가 구독하여 연료 상태를 표시하는 시스템을 구현하세요.
+`Car` 클래스에 연료 관련 이벤트를 선언하고, 
+`Dashboard`가 구독하여 연료 상태를 표시하는 시스템을 구현하세요.
 
-- `Car`: `FuelLow` (EventHandler\<FuelEventArgs\>), `FuelChanged` (Action\<int\>) 이벤트
+- `Car`: `FuelLow` (EventHandler\<FuelEventArgs\>),
+`FuelChanged` (Action\<int\>) 이벤트
+
 - `Dashboard`: 연료 게이지 표시 및 경고 메시지 출력
+
 - 초기 연료 50%에서 7번 운전 시뮬레이션
 
 **실행 결과**
@@ -196,11 +206,13 @@
 
 ## 9. 이벤트 접근자
 
-`SecurePublisher` 클래스에 사용자 정의 `add`/`remove` 접근자를 사용하여 이벤트 구독/해제를 직접 제어하세요.
+`SecurePublisher` 클래스에 사용자 정의 `add`/`remove` 접근자를 사용하여 
+이벤트 구독/해제를 직접 제어하세요.
 
 - `add` 접근자에서 구독자 추가 시 메시지 출력
 - `remove` 접근자에서 구독자 제거 시 메시지 출력
-- `Handler1`과 `Handler2`를 구독하고 이벤트 발생 후, `Handler1`을 해제하고 다시 이벤트 발생
+- `Handler1`과 `Handler2`를 구독하고 이벤트 발생 후, 
+`Handler1`을 해제하고 다시 이벤트 발생
 
 **실행 결과**
 
@@ -222,7 +234,8 @@ Handler2 실행됨
 
 ## 10. static 이벤트
 
-`GlobalNotifier` 클래스에 `static` 이벤트를 선언하고, 여러 모듈이 구독하여 전역 메시지를 수신하도록 구현하세요.
+`GlobalNotifier` 클래스에 `static` 이벤트를 선언하고, 
+여러 모듈이 구독하여 전역 메시지를 수신하도록 구현하세요.
 
 - `GlobalNotifier`: `static event Action<string> OnGlobalMessage` 이벤트
 - `Module1`, `Module2`: 생성자에서 이벤트 구독, 수신 시 메시지 출력
