@@ -5,7 +5,8 @@
 **요구사항**
 
 1. `Inventory` 클래스 (게시자)
-   - `event Action<string, int, int> ItemChanged` 이벤트 선언 (매개변수: 아이템명, 이전 수량, 현재 수량)
+   - `event Action<string, int, int> ItemChanged` 이벤트 선언
+	(매개변수: 아이템명, 이전 수량, 현재 수량)
    - 내부에 `Dictionary<string, int>`로 아이템 저장소 관리
    - `AddItem(string name, int count)` 메서드: 아이템 추가 (기존 아이템이면 수량 증가)
    - `RemoveItem(string name, int count)` 메서드: 아이템 제거 (수량 차감, 0 미만 방지)
